@@ -4,7 +4,6 @@ from utime import sleep_ms
 zielone = Pin(0, Pin.OUT)
 pomaranczowe = Pin(1, Pin.OUT)
 czerwone = Pin(2, Pin.OUT)   
-buzzer = Pin(2, Pin.OUT)   
 
 def wszystkie_off():
     zielone.off()
@@ -20,8 +19,6 @@ print("Symulator świateł drogowych.")
 
 while True:
     zielone.on()
-
-
     sleep_ms(1000)
     zielone.off()
     pomaranczowe.on()

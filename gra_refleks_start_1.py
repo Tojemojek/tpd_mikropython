@@ -28,21 +28,28 @@ print("Po zgaśnięciu wszystkich diod naciśnij i puść przycisk.")
 
 while True:
     wszystkie_off()
-
-    while przycisk.value() == 0:
-        sleep_ms(10)
-
     sekwencja_startowa()
+
+    if przycisk.value() == 0:
+        print("NIE OSZUKUJ!")
+        print("Naciśnięty przycisk przed startem!")
+    
+    # Zaczynamy mierzyć czas od momentu zgaśnięcia wszystkich diod
     start = ticks_ms()
     
+    # Czekamy na naciśnięcie przycisku
+    # Co milisekundę sprawdzamy, czy przycisk został naciśnięty
     while przycisk.value() == 1:
         sleep_ms(1)
     
+    # Wyszliśmy z pętli - czyli przycisk został naciśnięty
     koniec = ticks_ms()
 
+    # Obliczamy różnicę między czasem naciśnięcia a czasem startu
     czas_do_nacisniecia = ticks_diff(koniec, start)
 
+    # Piszemy wynik
     print("Czas do naciśnięcia:", czas_do_nacisniecia, "ms")
     print("---")
 
-    sleep_ms(10000)
+    sleep_ms(5000)

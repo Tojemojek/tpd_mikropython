@@ -20,7 +20,7 @@ print("Symulator świateł drogowych.")
 
 while True:
     zielone.on()
-    for i in range(5):
+    for _ in range(5):
         buzzer.on()
         sleep_ms(1000)
         buzzer.off()

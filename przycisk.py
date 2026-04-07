@@ -4,7 +4,7 @@ from utime import sleep_ms
 zielone = Pin(0, Pin.OUT)
 pomaranczowe = Pin(1, Pin.OUT)
 czerwone = Pin(2, Pin.OUT)   
-przycisk = Pin(3, Pin.IN, Pin.PULL_UP)
+przycisk = Pin(3, Pin.IN, Pin.PULL_DOWN)
 
 def wszystkie_off():
     zielone.off()
@@ -25,4 +25,6 @@ while True:
         wszystkie_off()
     else:
         wszystkie_on()
-        sleep_ms(10000)
+        for i in range(10):
+            print(i) 
+            sleep_ms(1000)

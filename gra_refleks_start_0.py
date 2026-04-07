@@ -28,10 +28,6 @@ print("Po zgaśnięciu wszystkich diod naciśnij i puść przycisk.")
 
 while True:
     wszystkie_off()
-
-    while przycisk.value() == 0:
-        sleep_ms(10)
-
     sekwencja_startowa()
     start = ticks_ms()
     
@@ -45,4 +41,4 @@ while True:
     print("Czas do naciśnięcia:", czas_do_nacisniecia, "ms")
     print("---")
 
-    sleep_ms(10000)
+    sleep_ms(5000)
