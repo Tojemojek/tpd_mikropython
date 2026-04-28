@@ -1,17 +1,38 @@
 from machine import Pin, PWM
 from time import sleep_ms
 
-# Pin 3 lub 8 do GND
-
-segment = Pin(15, Pin.OUT) 
-segment2 = Pin(14, Pin.OUT) 
+s1 = Pin(0, Pin.OUT)
+s2 = Pin(1, Pin.OUT)
+s3 = Pin(2, Pin.OUT)
+s4 = Pin(3, Pin.OUT)            
+s5 = Pin(4, Pin.OUT)
+s6 = Pin(5, Pin.OUT)
+s7 = Pin(7, Pin.OUT)
+s8 = Pin(6, Pin.OUT)    
 
 while True:
-    segment.on()
+    s1.on()
     sleep_ms(500)
-    segment.off()
+    s1.off()
+    s2.on()
     sleep_ms(500)
-    segment2.on()
+    s2.off()
+    s3.on()
     sleep_ms(500)
-    segment2.off()
+    s3.off()
+    s4.on()
     sleep_ms(500)
+    s4.off()
+    s5.on()
+    sleep_ms(500)
+    s5.off()
+    s6.on()
+    sleep_ms(500)
+    s6.off()
+    s7.on()
+    sleep_ms(500)
+    s7.off()
+    s8.on()
+    sleep_ms(500)
+    s8.off()
+    
